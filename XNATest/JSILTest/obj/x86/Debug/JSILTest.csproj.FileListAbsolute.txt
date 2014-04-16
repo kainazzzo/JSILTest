@@ -1,0 +1,7 @@
+C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\bin\x86\Debug\Content\chickennugents.xnb
+C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\bin\x86\Debug\JSILTest.exe
+C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\bin\x86\Debug\JSILTest.pdb
+C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\obj\x86\Debug\JSILTest.csprojResolveAssemblyReference.cache
+C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\obj\x86\Debug\JSILTest.exe
+C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\obj\x86\Debug\JSILTest.pdb

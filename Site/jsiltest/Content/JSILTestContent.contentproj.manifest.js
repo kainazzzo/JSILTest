@@ -3,5 +3,5 @@
 
 if (typeof (contentManifest) !== "object") { contentManifest = {}; };
 contentManifest["JSILTestContent.contentproj"] = [
-    ["Image", "C:/Users/dattid.HANLONIM/Documents/FlatRedBallProjects/jsil/jsiltest/Content/chickennugents.png", {"sizeBytes":609171}],
+    ["Image", "chickennugents.png", {"sizeBytes":609171}],
 ];
