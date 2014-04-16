@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSILTest", "JSILTest\JSILTest.csproj", "{4BCFB68B-893D-413A-B978-828A3593DD2B}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "JSILTestContent", "JSILTestContent\JSILTestContent.contentproj", "{EE750CAD-7711-4330-8EB7-52BE88C6AAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BCFB68B-893D-413A-B978-828A3593DD2B}.Debug|x86.ActiveCfg = Debug|x86
+		{4BCFB68B-893D-413A-B978-828A3593DD2B}.Debug|x86.Build.0 = Debug|x86
+		{4BCFB68B-893D-413A-B978-828A3593DD2B}.Release|x86.ActiveCfg = Release|x86
+		{4BCFB68B-893D-413A-B978-828A3593DD2B}.Release|x86.Build.0 = Release|x86
+		{EE750CAD-7711-4330-8EB7-52BE88C6AAD5}.Debug|x86.ActiveCfg = Debug|x86
+		{EE750CAD-7711-4330-8EB7-52BE88C6AAD5}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
