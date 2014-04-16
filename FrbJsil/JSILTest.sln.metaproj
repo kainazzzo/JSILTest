@@ -13,30 +13,39 @@
     <VCTargetsPath10>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\</VCTargetsPath10>
     <VCTargetsPath11>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\</VCTargetsPath11>
     <Configuration>Debug</Configuration>
-    <Platform>x86</Platform>
+    <Platform>Mixed Platforms</Platform>
     <AspNetConfiguration>Debug</AspNetConfiguration>
-    <SolutionDir>C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\</SolutionDir>
+    <SolutionDir>C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\</SolutionDir>
     <SolutionExt>.sln</SolutionExt>
     <SolutionFileName>JSILTest.sln</SolutionFileName>
     <SolutionName>JSILTest</SolutionName>
-    <SolutionPath>C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest.sln</SolutionPath>
+    <SolutionPath>C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTest.sln</SolutionPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <CurrentSolutionConfigurationContents>
       <SolutionConfiguration xmlns="">
-  <ProjectConfiguration Project="{4BCFB68B-893D-413A-B978-828A3593DD2B}" AbsolutePath="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\JSILTest.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
-  <ProjectConfiguration Project="{EE750CAD-7711-4330-8EB7-52BE88C6AAD5}" AbsolutePath="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTestContent\JSILTestContent.contentproj" BuildProjectInSolution="False">Debug|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{4BCFB68B-893D-413A-B978-828A3593DD2B}" AbsolutePath="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTest\JSILTest.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{EE750CAD-7711-4330-8EB7-52BE88C6AAD5}" AbsolutePath="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTestContent\JSILTestContent.contentproj" BuildProjectInSolution="False">Debug|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{3A375947-2978-462F-8695-EBCF6C1E477D}" AbsolutePath="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\FrbJsil\FrbJsil.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
 </SolutionConfiguration>
     </CurrentSolutionConfigurationContents>
   </PropertyGroup>
   <ItemDefinitionGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\JSILTest.csproj">
+    <ProjectReference Include="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTest\JSILTest.csproj">
       <ToolsVersion>
       </ToolsVersion>
       <SkipNonexistentProjects>False</SkipNonexistentProjects>
       <AdditionalProperties>Configuration=Debug; Platform=x86; VisualStudioVersion=11.0</AdditionalProperties>
       <Configuration>Debug</Configuration>
       <Platform>x86</Platform>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\FrbJsil\FrbJsil.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Debug; Platform=AnyCPU; VisualStudioVersion=11.0</AdditionalProperties>
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
     </ProjectReference>
   </ItemGroup>
   <Target Name="ValidateSolutionConfiguration">
@@ -48,8 +57,15 @@
     <Error Condition="'$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')" Text="The tools version &quot;$(MSBuildToolsVersion)&quot; of the solution does not support building projects with a different tools version." Code="MSB4149" HelpKeyword="MSBuild.SolutionToolsVersionDoesNotSupportProjectToolsVersion" />
   </Target>
   <Target Name="ValidateProjects">
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " Text="The project &quot;JSILTest&quot; is not selected for building in solution configuration &quot;Debug|Any CPU&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " Text="The project &quot;JSILTest&quot; is not selected for building in solution configuration &quot;Release|Any CPU&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " Text="The project &quot;JSILTestContent&quot; is not selected for building in solution configuration &quot;Debug|Any CPU&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Mixed Platforms') " Text="The project &quot;JSILTestContent&quot; is not selected for building in solution configuration &quot;Debug|Mixed Platforms&quot;." />
     <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;JSILTestContent&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " Text="The project &quot;JSILTestContent&quot; is not selected for building in solution configuration &quot;Release|Any CPU&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Mixed Platforms') " Text="The project &quot;JSILTestContent&quot; is not selected for building in solution configuration &quot;Release|Mixed Platforms&quot;." />
     <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;JSILTestContent&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;FrbJsil&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
   </Target>
   <Target Name="Build" Outputs="@(CollectedBuildOutput)">
     <MSBuild Projects="@(ProjectReference)" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
@@ -68,19 +84,35 @@
     <MSBuild Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)" />
   </Target>
   <Target Name="JSILTest" Outputs="@(JSILTestBuildOutput)">
-    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
       <Output TaskParameter="TargetOutputs" ItemName="JSILTestBuildOutput" />
     </MSBuild>
   </Target>
   <Target Name="JSILTest:Clean">
-    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
   </Target>
   <Target Name="JSILTest:Rebuild" Outputs="@(JSILTestBuildOutput)">
-    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
       <Output TaskParameter="TargetOutputs" ItemName="JSILTestBuildOutput" />
     </MSBuild>
   </Target>
   <Target Name="JSILTest:Publish">
-    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\XNATest\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\JSILTest\JSILTest.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=x86;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="FrbJsil" Outputs="@(FrbJsilBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\FrbJsil\FrbJsil.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="FrbJsilBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="FrbJsil:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\FrbJsil\FrbJsil.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="FrbJsil:Rebuild" Outputs="@(FrbJsilBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\FrbJsil\FrbJsil.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="FrbJsilBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="FrbJsil:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'C:\Users\dattid.HANLONIM\Documents\Visual Studio 2012\Projects\jsilgit\JSILTest\FrbJsil\FrbJsil\FrbJsil.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Debug; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
   </Target>
 </Project>

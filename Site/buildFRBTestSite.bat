@@ -1,2 +1,2 @@
 cd frbtest
-..\JSILBin\JSILc.exe ..\..\FRBTest\FRBTest.sln
+..\JSILBin\JSILc.exe ..\..\FrbJsil\JSILTest.sln
