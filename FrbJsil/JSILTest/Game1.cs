@@ -18,7 +18,6 @@ namespace JSILTest
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
-        Sprite sprite;
 
         public Game1()
         {
@@ -40,7 +39,17 @@ namespace JSILTest
             
             mTexture = Content.Load<Texture2D>("chickennugents");
 
-            sprite = SpriteManager.AddSprite(mTexture);
+            Random random = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+                var sprite = SpriteManager.AddSprite(mTexture);
+
+                sprite.X = -200 + 400 * (float)random.NextDouble();
+                sprite.Y = -200 + 400 * (float)random.NextDouble();
+
+                sprite.TextureScale = .1f;
+            }
 
             base.Initialize();
         }
@@ -57,7 +66,9 @@ namespace JSILTest
 
             FlatRedBallServices.Update(gameTime );
 
-            sprite.X++;
+            
+            //Camera.Main.Y++;
+
             // TODO: Add your update logic here
             
 
