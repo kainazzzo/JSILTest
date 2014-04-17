@@ -13,6 +13,8 @@ namespace FlatRedBall
         public static void InitializeFlatRedBall(Game game, GraphicsDeviceManager graphics)
         {
             Renderer.Initialize(graphics);
+
+            Camera.Main = new Camera();
         }
 
 
